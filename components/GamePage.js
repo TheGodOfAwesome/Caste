@@ -42,6 +42,7 @@ class GamePage extends React.Component {
         onClick={this.toggleCollapse("navbarCollapse")}
       />
     );
+    
     return (
       <div id="classicformpage">
         <MDBView>

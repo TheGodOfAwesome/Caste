@@ -4,12 +4,9 @@ import styles from '../styles/Home.module.css'
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import IntroSection from '../components/IntroSection';
-import ImageInfoCard from '../components/ImageInfoCard';
-import ImagePartnerCard from '../components/ImagePartnerCard';
-import IntroVideoSection from '../components/IntroVideoSection';
+import GamePage from '../components/GamePage';
 
-export default function Home() {
+export default function Game() {
   return (
     <div className={styles.container}>
       <Head>
@@ -18,10 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      {/* <IntroVideoSection/> */}
-      <IntroSection/>
-      <ImagePartnerCard/>
-      <ImageInfoCard/>
+      <GamePage/>
     </div>
   )
 }
