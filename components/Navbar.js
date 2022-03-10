@@ -182,7 +182,7 @@ export default function Navbar() {
 
     async function walletConn() {
         setModal1(!modal1);
-        await authenticate({signingMessage:"Lore Sign In"});
+        await authenticate({signingMessage:"Caste Sign In"});
         enableWeb3();
         try{
             let addr = user.get('ethAddress');
@@ -241,22 +241,25 @@ export default function Navbar() {
         <>
             <MDBNavbar transparent className="z-depth-0" color="white" expand="md" fixed="top" style={{ fontColor:'black' }}>
                 <MDBNavbarBrand className='py-0 font-weight-bold' style={{ color: fontColor }}>
-                    <Link href="/"><img src="./assets/image/lore_logo_square.png" height="45px"/></Link>
+                    <Link href="/"><img src="./assets/image/caste_logo.png" height="45px"/></Link>
                 </MDBNavbarBrand>
                 <MDBNavbarToggler onClick={() => { toggleCollapse() }}/>
                 <MDBCollapse id="navbarCollapse3" isOpen={isOpen} navbar>
                     <MDBNavbarNav left>
                         <MDBNavItem active>
-                            <a><MDBNavbarBrand><Link href="/"><strong style={{ color: "#680de4" }}>Home</strong></Link></MDBNavbarBrand></a>
+                            <a><MDBNavbarBrand><Link href="/"><strong style={{ color: "#fff" }}>Home</strong></Link></MDBNavbarBrand></a>
                         </MDBNavItem>
                         <MDBNavItem>
-                            <a><MDBNavbarBrand><Link href="/create"><strong style={{ color: "#680de4" }}>Create</strong></Link></MDBNavbarBrand></a>
+                            <a><MDBNavbarBrand><Link href="/game"><strong style={{ color: "#fff" }}>Game</strong></Link></MDBNavbarBrand></a>
+                        </MDBNavItem>
+                        {/* <MDBNavItem>
+                            <a><MDBNavbarBrand><Link href="/create"><strong style={{ color: "#fff" }}>Create</strong></Link></MDBNavbarBrand></a>
                         </MDBNavItem>
                         <MDBNavItem>
                             <a>
                                 <MDBNavbarBrand>
                                     <Link href="/live">
-                                        <strong style={{ color: "#680de4" }}>
+                                        <strong style={{ color: "#fff" }}>
                                             { 
                                                 isLive
                                                     ?   <div key={key}>Live <b style={{ color: "red", fontSize:"1em"}}>&bull;</b></div>
@@ -266,14 +269,14 @@ export default function Navbar() {
                                     </Link>
                                 </MDBNavbarBrand>
                             </a>
-                        </MDBNavItem>
+                        </MDBNavItem> */}
                     </MDBNavbarNav>
 
                     {/* <MDBCard> */}
                     <MDBNavbarNav right>
                         <MDBNavItem>
                             <MDBNavbarBrand>
-                                <strong  style={{ color: '#680de4' }}>
+                                <strong  style={{ color: '#fff' }}>
                                     <MDBTooltip
                                         placement='bottom'
                                         domElement
@@ -353,7 +356,7 @@ export default function Navbar() {
                             </MDBListGroup>
                         
                             <div>
-                                <a onClick={() => { disconnect()}} className="btn btn-black rounded" style={{width:"100%", color: '#680de4'}}>Disconnect</a>
+                                <a onClick={() => { disconnect()}} className="btn btn-black rounded" style={{width:"100%", color: '#fff'}}>Disconnect</a>
                             </div>
                             <br/>
                         </MDBContainer>

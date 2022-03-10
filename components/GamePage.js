@@ -1,155 +1,92 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import {
-  MDBNavbar,
-  MDBNavbarBrand,
-  MDBNavbarNav,
-  MDBNavItem,
-  MDBNavLink,
-  MDBNavbarToggler,
-  MDBCollapse,
-  MDBMask,
-  MDBRow,
-  MDBCol,
-  MDBIcon,
-  MDBBtn,
-  MDBView,
-  MDBContainer,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBFormInline,
-  MDBAnimation
-} from "mdbreact";
-import "./index.css";
+import { MDBAnimation, MDBContainer, MDBRow, MDBCol, MDBIcon } from "mdbreact";
+import ReactPlayer from 'react-player'
 
-class GamePage extends React.Component {
-  state = {
-    collapseID: ""
-  };
-
-  toggleCollapse = collapseID => () =>
-    this.setState(prevState => ({
-      collapseID: prevState.collapseID !== collapseID ? collapseID : ""
-    })
-  );
-
-  render() {
-    const overlay = (
-      <div
-        id="sidenav-overlay"
-        style={{ backgroundColor: "transparent" }}
-        onClick={this.toggleCollapse("navbarCollapse")}
-      />
-    );
-    
+const GamePage = () => {
     return (
-      <div id="classicformpage">
-        <MDBView>
-          <MDBMask className="d-flex justify-content-center align-items-center gradient">
-            <MDBContainer>
-              <MDBRow>
-                <MDBAnimation
-                  type="fadeInLeft"
-                  delay=".3s"
-                  className="white-text text-center text-md-left col-md-6 mt-xl-5 mb-5"
-                >
-                  <h1 className="h1-responsive font-weight-bold">
-                    Sign up right now!
-                  </h1>
-                  <hr className="hr-light" />
-                  <h6 className="mb-4">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Rem repellendus quasi fuga nesciunt dolorum nulla magnam
-                    veniam sapiente, fugiat! Commodi sequi non animi ea dolor
-                    molestiae, quisquam iste, maiores. Nulla.
-                  </h6>
-                  <MDBBtn outline color="white">
-                    Learn More
-                  </MDBBtn>
-                </MDBAnimation>
+        <MDBContainer
+            style={{ height:"100vh", width: '100vw', paddingTop: '3.5em'}}
+        >
+            <header 
+              style={{
+                backgroundImage: "url(./assets/image/hero-bg1.jpg)",
+                backgroundSize: "cover",
+                backgroundRepeat: "no-repeat",
+                backgroundPosition: "center center",
+                backgroundColor: "transparent",
+                height: "100%",
+                width: "100%"
+              }}
+            >
+                <div className="view">
+                    <MDBRow>
+                        {/* <MDBCol md='6' className='text-center text-md-left mt-xl-5 mb-5'>
+                            <MDBAnimation type='fadeInLeft' delay='.3s'>
+                                <h1 className='h1-responsive font-weight-bold mt-sm-5'>
+                                    Unlock exclusive courses, start learning and earning.
+                                </h1>
+                                <hr className='hr-light' />
+                                <h6 className='mb-4'>
+                                    <strong>
+                                        Mint Condition helps creators mint exclusive courses and tutorials as <strong style={{color: "#7cb739"}}>NFTS </strong> 
+                                        and allows collectors to learn, and then earn with the creators through a vibrant resale ecosystem built on the Blockchain.
+                                    </strong>   
+                                </h6>
+                                <a href="#waitlist" className="btn rounded" style={{backgroundColor: "#89df52 !important", color:"white", outline: 0}}>Join Our Waitlist</a>
+                                <a href="https://discord.gg/DyXg9AHX" className="btn rounded" style={{backgroundColor: "#89df52 !important", color:"white", outline: 0}}><MDBIcon fab icon="discord"/> Join Our Discord</a>
+                            </MDBAnimation>
+                        </MDBCol>
 
-                <MDBCol md="6" xl="5" className="mb-4">
-                  <MDBAnimation type="fadeInRight" delay=".3s">
-                    <MDBCard id="classic-card">
-                      <MDBCardBody className="white-text">
-                        <h3 className="text-center">
-                          <MDBIcon icon="user" /> Register:
-                        </h3>
-                        <hr className="hr-light" />
-                        <MDBInput
-                          className="white-text"
-                          iconClass="white-text"
-                          label="Your name"
-                          icon="user"
-                        />
-                        <MDBInput
-                          className="white-text"
-                          iconClass="white-text"
-                          label="Your email"
-                          icon="envelope"
-                        />
-                        <MDBInput
-                          className="white-text"
-                          iconClass="white-text"
-                          label="Your password"
-                          icon="lock"
-                          type="password"
-                        />
-                        <div className="text-center mt-4 black-text">
-                          <MDBBtn color="indigo">Sign Up</MDBBtn>
-                          <hr className="hr-light" />
-                          <div className="text-center d-flex justify-content-center white-label">
-                            <a href="#!" className="p-2 m-2">
-                              <MDBIcon
-                                fab
-                                icon="twitter"
-                                className="white-text"
-                              />
-                            </a>
-                            <a href="#!" className="p-2 m-2">
-                              <MDBIcon
-                                fab
-                                icon="linkedin"
-                                className="white-text"
-                              />
-                            </a>
-                            <a href="#!" className="p-2 m-2">
-                              <MDBIcon
-                                fab
-                                icon="instagram"
-                                className="white-text"
-                              />
-                            </a>
-                          </div>
-                        </div>
-                      </MDBCardBody>
-                    </MDBCard>
-                  </MDBAnimation>
-                </MDBCol>
-              </MDBRow>
-            </MDBContainer>
-          </MDBMask>
-        </MDBView>
-
-        <MDBContainer>
-          <MDBRow className="py-5">
-            <MDBCol md="12" className="text-center">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </MDBCol>
-          </MDBRow>
+                        <MDBCol md='6' xl='5' className='text-center'>
+                            <MDBAnimation type='fadeInRight' delay='.3s'>
+                                <MDBRow>
+                                    <MDBCol className="d-flex justify-content-center align-items-center" md='6' style={{paddingTop: "1em !important"}}>
+                                            <ReactPlayer
+                                                className='react-player'
+                                                url="./assets/video/lore.mp4"
+                                                loop={true}
+                                                muted
+                                                width='200px'
+                                                height='200px'
+                                                playing={true}
+                                                style={{
+                                                    borderRadius: "2.5rem",
+                                                    overflow: "hidden",
+                                                    maxHeight:"200px",
+                                                    float: "centre"
+                                                }}
+                                            />
+                                    </MDBCol>
+                                    <MDBCol md='6' style={{paddingTop: "1em !important"}}>
+                                    </MDBCol>
+                                </MDBRow>
+                                <MDBRow>
+                                    <MDBCol md='6' style={{paddingTop: "1em !important"}}>
+                                    </MDBCol>
+                                    <MDBCol className="d-flex justify-content-center align-items-center" md='6' style={{paddingTop: "1em !important"}}>
+                                        <div style={{paddingTop:"1em"}}></div>
+                                        <ReactPlayer
+                                            className='react-player'
+                                            url="./assets/video/road.mp4"
+                                            loop={true}
+                                            width='200px'
+                                            height='200px'
+                                            playing={true}
+                                            style={{
+                                                borderRadius: "2.5rem",
+                                                overflow: "hidden",
+                                                maxHeight:"200px",
+                                            }}
+                                            muted
+                                        />
+                                    </MDBCol>
+                                </MDBRow>
+                            </MDBAnimation>
+                        </MDBCol> */}
+                    </MDBRow>
+                </div>
+            </header>
         </MDBContainer>
-      </div>
-    );
-  }
+    )
 }
 
-export default GamePage;
+export default GamePage

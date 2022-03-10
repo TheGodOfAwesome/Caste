@@ -8,6 +8,7 @@ import IntroSection from '../components/IntroSection';
 import ImageInfoCard from '../components/ImageInfoCard';
 import ImagePartnerCard from '../components/ImagePartnerCard';
 import IntroVideoSection from '../components/IntroVideoSection';
+import BlurbSection from '../components/BlurbSection';
 
 export default function Home() {
   return (
@@ -19,9 +20,14 @@ export default function Home() {
       </Head>
 
       {/* <IntroVideoSection/> */}
-      <IntroSection/>
-      <ImagePartnerCard/>
-      <ImageInfoCard/>
+      <div
+        style={{ backgroundColor: "#000"}}
+      >
+        <IntroSection/>
+        <BlurbSection/>
+        {/* <ImagePartnerCard/>
+        <ImageInfoCard/> */}
+      </div>
     </div>
   )
 }
