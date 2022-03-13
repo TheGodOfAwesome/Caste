@@ -252,6 +252,9 @@ export default function Navbar() {
                         <MDBNavItem>
                             <a><MDBNavbarBrand><Link href="/game"><strong style={{ color: "#fff" }}>Game</strong></Link></MDBNavbarBrand></a>
                         </MDBNavItem>
+                        <MDBNavItem>
+                            <a><MDBNavbarBrand><Link href="/create"><strong style={{ color: "#fff" }}>Create</strong></Link></MDBNavbarBrand></a>
+                        </MDBNavItem>
                         {/* <MDBNavItem>
                             <a><MDBNavbarBrand><Link href="/create"><strong style={{ color: "#fff" }}>Create</strong></Link></MDBNavbarBrand></a>
                         </MDBNavItem>

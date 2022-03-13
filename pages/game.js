@@ -9,7 +9,7 @@ export default function Game() {
     return (
         <div>
             <Head>
-                <title>Lore</title>
+                <title>Caste</title>
                 <meta name="description" content="" />
                 <meta property="og:image" content="" />
                 <link rel="icon" href="/favicon.ico" />

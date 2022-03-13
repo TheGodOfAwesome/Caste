@@ -3,20 +3,20 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css'; 
 import 'mdbreact/dist/css/mdb.css';
 import 'react-datetime/css/react-datetime.css';
-import CreateEvent from '../components/CreateEvent';
+import CreateCard from '../components/CreateCard';
 
 export default function Create() {
 
     return (
         <div>
             <Head>
-                <title>Lore</title>
+                <title>Caste</title>
                 <meta name="description" content="" />
                 <meta property="og:image" content="" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <CreateEvent/>
+            <CreateCard/>
         </div>
     )
 }

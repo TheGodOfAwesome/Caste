@@ -10,6 +10,7 @@ import {
     MDBCol, MDBBtn, MDBModal, MDBModalBody, MDBIcon, MDBFooter 
 } from 'mdbreact';
 import Countdown from './Countdown';
+import Sound from './Sound';
 
 export default function GamePlay() {
     const [modal, setModal] = useState(false);
@@ -87,7 +88,7 @@ export default function GamePlay() {
                                                 <img onClick={()=>{enlargeCard("3")}} className="rounded" src="./assets/image/cards/3.png" height="200px"/>
                                             </MDBCol>
                                             <MDBCol>
-                                                <img onClick={()=>{enlargeCard("4")}} className="rounded" src="./assets/image/cards/4.png" height="200px"/>
+                                                <img onClick={()=>{enlargeCard("4")}} className="rounded" src="./assets/image/cards/compass_back.gif" height="200px"/>
                                             </MDBCol>
                                             <MDBCol>
                                                 <img onClick={()=>{enlargeCard("5")}} className="rounded" src="./assets/image/cards/card_placeholder.png" height="200px"/>
@@ -104,7 +105,7 @@ export default function GamePlay() {
                                 (secsToEvent < 15)
                                 &&
                                 <MDBCard style={{ position: "fixed", bottom: 5, backgroundColor:"transparent"}}>
-                                    <MDBCardBody className='text-center text-white transparent' s>
+                                    <MDBCardBody className='text-center text-white' s>
                                         <MDBRow>
                                             <MDBCol>
                                                 <img onClick={()=>{enlargeCard("1")}} className="rounded" src="./assets/image/cards/1.png" height="100px"/>
@@ -125,6 +126,11 @@ export default function GamePlay() {
                                                 <img onClick={()=>{enlargeCard("scorched_earth")}} className="rounded" src="./assets/image/cards/scorched_earth.png" height="100px"/>
                                             </MDBCol>
                                         </MDBRow>
+                                        {/* <MDBRow>
+                                            <MDBCol>
+                                                <Sound/>
+                                            </MDBCol>
+                                        </MDBRow> */}
                                     </MDBCardBody>
                                 </MDBCard>
                             }
@@ -133,7 +139,7 @@ export default function GamePlay() {
                     
                     <MDBContainer>
                         <MDBModal isOpen={modal} toggle={() => {setModal()}} side position="top-right">
-                            <MDBModalBody toggle={() => {setModal()}}  className="form" style={{backgroundColor:"transparent"}}>
+                            <MDBModalBody style={{backgroundColor: "#000"}} toggle={() => {setModal()}}  className="form">
                                 <MDBContainer className="d-flex justify-content-center align-items-center">
                                     <img className="rounded" src={"./assets/image/cards/" + enlargedCard + ".png"} height="450px"/>
                                 </MDBContainer>
