@@ -43,7 +43,7 @@ class Sound extends Component {
         </p> */}
 
         {/* Button to call our main function */}
-        <audio controls autoplay src="./assets/audio/anti_entity.mp3" />
+        {/* <audio controls autoplay src="./assets/audio/anti_entity.mp3" /> */}
         {/* <button className="btn dark rounded" style={{color: "#fff"}} onClick={this.playPause}>
         {this.state.isPlaying ? <MDBIcon icon="play"/> : <MDBIcon icon="pause" />} Play | Pause
         </button> */}
