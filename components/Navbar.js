@@ -249,11 +249,11 @@ export default function Navbar() {
                         <MDBNavItem active>
                             <a><MDBNavbarBrand><Link href="/"><strong style={{ color: "#fff" }}>Home</strong></Link></MDBNavbarBrand></a>
                         </MDBNavItem>
-                        <MDBNavItem>
+                        {/* <MDBNavItem>
                             <a><MDBNavbarBrand><Link href="/game"><strong style={{ color: "#fff" }}>Game</strong></Link></MDBNavbarBrand></a>
-                        </MDBNavItem>
+                        </MDBNavItem> */}
                         <MDBNavItem>
-                            <a><MDBNavbarBrand><Link href="/create"><strong style={{ color: "#fff" }}>Create</strong></Link></MDBNavbarBrand></a>
+                            <a><MDBNavbarBrand><Link href="#create"><strong style={{ color: "#fff" }}>Create</strong></Link></MDBNavbarBrand></a>
                         </MDBNavItem>
                         {/* <MDBNavItem>
                             <a><MDBNavbarBrand><Link href="/create"><strong style={{ color: "#fff" }}>Create</strong></Link></MDBNavbarBrand></a>
@@ -277,7 +277,7 @@ export default function Navbar() {
 
                     {/* <MDBCard> */}
                     <MDBNavbarNav right>
-                        <MDBNavItem>
+                        {/* <MDBNavItem>
                             <MDBNavbarBrand>
                                 <strong  style={{ color: '#fff' }}>
                                     <MDBTooltip
@@ -298,7 +298,7 @@ export default function Navbar() {
                                     </MDBTooltip>
                                 </strong>
                             </MDBNavbarBrand>
-                        </MDBNavItem>
+                        </MDBNavItem> */}
                     </MDBNavbarNav>
                     {/* </MDBCard> */}
                 </MDBCollapse>
