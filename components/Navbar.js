@@ -277,6 +277,11 @@ export default function Navbar() {
 
                     {/* <MDBCard> */}
                     <MDBNavbarNav right>
+                        <MDBNavItem>
+                            <a href="https://discord.gg/FyWwUNXxy2" className="gplus-ic" style={{padding:"10px"}}>
+                                <i className="fab fa-discord white-text mr-lg-4"> </i>
+                            </a>
+                        </MDBNavItem>
                         {/* <MDBNavItem>
                             <MDBNavbarBrand>
                                 <strong  style={{ color: '#fff' }}>
